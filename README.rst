@@ -11,7 +11,7 @@ Example
 
 .. code:: python
 
-    import jbossparser
+    from jbossply.jbossparser import JbossParser
     test3 = """{
         "outcome" => "success",
         "result" => {
@@ -31,7 +31,7 @@ Example
     }
     """
 
-    parser = jbossparser.JbossParser()
+    parser = JbossParser()
     print(parser.parse(test3))
 
 Which gives output
