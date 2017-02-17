@@ -48,6 +48,17 @@ You may want to cache parser tables, then create `JbossParser` like this:
     parser = jbossparser.JbossParser(write_tables=True, outputdir='/tmp/table-dir')
 
 
+Command line usage
+------------------
+
+After installed with pip you may use also the command line helper `jboss2json`.
+
+::
+
+    $ cat jboss-output.txt | jboss2json
+    {"outcome": "success", "result": {"rule-3": {"pattern": "^/pki/?$", "flags": "L,QSA,R", "condition": null, "substitution": "/ejbca/adminweb"}, "rule-1": {"pattern": "^/$", "flags": "L,QSA,R", "condition": null, "substitution": "/ejbca"}}}
+
+
 Installation
 ------------
 
