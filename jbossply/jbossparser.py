@@ -137,7 +137,7 @@ class JbossLexer(object):
     # says '%x5D-10FFFF' but most pythons by default will not handle that
     def t_string_UNESCAPED(self, t):
         r'[\x20-\x21,\x23-\x5B,\x5D-\xFF]+'
-        t.value = unicode(t.value, encoding='utf8')
+        t.value = t.value if isinstance(t.value, unicode) else unicode(t.value, encoding='utf8')
         return t
 
     # Exits the string state on an unescaped closing quotation mark
