@@ -45,7 +45,7 @@ You may want to cache parser tables, then create `JbossParser` like this:
 
 .. code:: python
 
-    parser = jbossparser.JbossParser(write_tables=True, outputdir='/tmp/table-dir')
+    parser = JbossParser(write_tables=True, outputdir='/tmp/table-dir')
 
 
 Command line usage
